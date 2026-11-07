@@ -6,6 +6,7 @@ SPA em React + Vite + React Router feita para a Situação-Problema Individual (
 - **RA:** 26176915
 - **Sistema:** Agência de Viagens - Samuel
 - **Slug:** `pacotes`
+- **Site publicado:** https://sah123campos.github.io/agencia/
 
 ## Meus parâmetros
 
@@ -44,6 +45,7 @@ Depois abra o endereço mostrado no terminal (normalmente http://localhost:5173)
 - [x] **O3 — Remover:** botão em cada linha da tabela; a função `removerRegistro` é criada no App e passada por props (usa `filter`).
 - [x] **O5 — Busca:** campo na visualização que filtra pelo Destino enquanto o usuário digita (estado local + `filter` + `includes`).
 - [x] **O6 — Persistência:** registros salvos no `localStorage` com `useEffect` + `JSON.stringify`, mantidos após o F5.
+- [x] **O8 — Publicação:** site no GitHub Pages, publicado por GitHub Actions (`.github/workflows/deploy.yml`) a cada push. Para as rotas funcionarem ao recarregar, o `vite.config.js` usa a subpasta do repositório como `base`, o `BrowserRouter` recebe o `basename` e o workflow copia o `index.html` para `404.html`.
 
 ## Estrutura
 
