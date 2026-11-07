@@ -60,3 +60,291 @@
   line-height: 18px;
   text-align: center;
 }
+
+/* ===== Rodapé fixo, logo acima da navbar ===== */
+.rodape {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: var(--altura-navbar);
+  height: var(--altura-rodape);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-principal);
+  color: #fff;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+/* ===== Estrutura das páginas ===== */
+.conteudo {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.pagina {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.subtitulo {
+  margin: 0 0 20px;
+  color: var(--texto-suave);
+}
+
+/* ===== Botões ===== */
+.botao {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--cor-principal);
+  border-radius: 8px;
+  background: var(--cor-principal);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.botao:hover {
+  background: var(--cor-escura);
+  border-color: var(--cor-escura);
+}
+
+.botao-secundario {
+  background: transparent;
+  color: var(--cor-principal);
+}
+
+.botao-secundario:hover {
+  background: var(--cor-clara);
+}
+
+/* ===== Home ===== */
+.home {
+  text-align: center;
+  padding: 48px 28px;
+}
+
+.etiqueta {
+  margin: 0 0 8px;
+  color: var(--cor-principal);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.autor {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.contador-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 28px 0;
+  padding: 20px 40px;
+  border-radius: 12px;
+  background: var(--cor-clara);
+}
+
+.contador-numero {
+  color: var(--cor-principal);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.contador-legenda {
+  color: var(--texto-suave);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ===== Formulário ===== */
+.formulario {
+  display: grid;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.formulario label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.formulario input,
+.formulario select,
+.busca {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--texto);
+  font: inherit;
+  font-weight: 400;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.busca:focus {
+  outline: 2px solid var(--cor-principal);
+  outline-offset: 1px;
+  border-color: var(--cor-principal);
+}
+
+.formulario .botao {
+  justify-self: start;
+}
+
+/* ===== Alertas ===== */
+.alerta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.alerta-sucesso {
+  background: var(--sucesso-fundo);
+  color: var(--sucesso);
+  border-left: 4px solid var(--sucesso);
+}
+
+.alerta-erro {
+  background: var(--erro-fundo);
+  color: var(--erro);
+  border-left: 4px solid var(--erro);
+}
+
+.alerta-fechar {
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ===== Visualização em tabela (Tabela C = 1) ===== */
+.busca {
+  max-width: 360px;
+  margin: 8px 0 16px;
+}
+
+.tabela-container {
+  overflow-x: auto;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.tabela th,
+.tabela td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--borda);
+}
+
+.tabela th {
+  background: var(--cor-principal);
+  color: #fff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tabela tbody tr:nth-child(even) {
+  background: #fafcfd;
+}
+
+.tabela tbody tr:hover {
+  background: var(--cor-clara);
+}
+
+.tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela .numero {
+  font-variant-numeric: tabular-nums;
+}
+
+.selo {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--cor-clara);
+  color: var(--cor-escura);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.botao-remover {
+  padding: 6px 12px;
+  border: 1px solid var(--erro);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--erro);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.botao-remover:hover {
+  background: var(--erro);
+  color: #fff;
+}
+
+.sem-resultado,
+.vazio {
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+.vazio {
+  padding: 32px 0;
+}
+
+/* ===== Página não encontrada ===== */
+.nao-encontrada {
+  text-align: center;
+  padding: 48px 28px;
+}
+
+.codigo-erro {
+  display: block;
+  color: var(--cor-principal);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .pagina {
+    padding: 20px 16px;
+  }
+}

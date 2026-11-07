@@ -7,6 +7,7 @@ import Cadastro from './pages/Cadastro.jsx'
 import Visualizacao from './pages/Visualizacao.jsx'
 import NaoEncontrada from './pages/NaoEncontrada.jsx'
 import Navbar from './components/Navbar.jsx'
+import Rodape from './components/Rodape.jsx'
 import './App.css'
 
 // Chave usada no localStorage (opcional O6)
@@ -81,6 +82,7 @@ function App() {
           <Route path="*" element={<NaoEncontrada />} />
         </Routes>
       </main>
+      <Rodape />
       <Navbar quantidade={registros.length} />
     </>
   )

@@ -1,13 +1,51 @@
+/* ===== Identidade visual =====
+   Cor principal calculada pelo RA: 915 % 360 = 195 -> hsl(195, 60%, 35%) */
 :root {
-  --altura-navbar: 64px;
-  --borda: #dde3e8;
-  --texto-suave: #5b6770;
   --cor-principal: hsl(195, 60%, 35%);
-  --cor-clara: hsl(195, 60%, 95%);
+  /* tons derivados da cor principal (mudam junto com ela) */
+  --cor-escura: hsl(from var(--cor-principal) h s calc(l - 10));
+  --cor-clara: hsl(from var(--cor-principal) h s 95%);
+
+  --fundo: #f4f7f9;
+  --superficie: #ffffff;
+  --texto: #1d2a33;
+  --texto-suave: #5b6770;
+  --borda: #dde3e8;
+  --sucesso: #1e7b4a;
+  --sucesso-fundo: #e5f5ec;
+  --erro: #b3261e;
+  --erro-fundo: #fdecea;
+
+  --altura-navbar: 64px;
+  --altura-rodape: 32px;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  padding-bottom: var(--altura-navbar);
+  min-height: 100vh;
+  background: var(--fundo);
+  /* espaço para o rodapé e a navbar fixos não cobrirem o conteúdo */
+  padding-bottom: calc(var(--altura-navbar) + var(--altura-rodape) + 16px);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+code {
+  background: var(--cor-clara);
+  color: var(--cor-escura);
+  padding: 2px 6px;
+  border-radius: 4px;
 }
