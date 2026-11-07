@@ -1,5 +1,5 @@
-function Visualizacao() {
-  return <h1>Visualizacao</h1>
+function Visualizacao({ title }) {
+  return <h1>{title}</h1>
 }
 
 export default Visualizacao
