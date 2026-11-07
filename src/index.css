@@ -1,0 +1,13 @@
+:root {
+  --altura-navbar: 64px;
+  --borda: #dde3e8;
+  --texto-suave: #5b6770;
+  --cor-principal: hsl(195, 60%, 35%);
+  --cor-clara: hsl(195, 60%, 95%);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  padding-bottom: var(--altura-navbar);
+}
